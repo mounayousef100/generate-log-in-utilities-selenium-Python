@@ -1,0 +1,14 @@
+class LoginPage(Action):
+    def __init__(self, driver,logger):
+        super().__init__(driver)
+        self.logger = logger
+
+   
+
+    def login(self,email,password):
+        time.sleep(5)
+        actual_title = self.driver.title
+        time.sleep(5)
+        self.logger.info(actual_title)
+        self.logger.info("open website")
+
